@@ -73,7 +73,10 @@ ko.utils.domNodeDisposal = new (function () {
 
                 // ... then its descendants, where applicable
                 if (cleanableNodeTypesWithDescendants[node.nodeType]) {
-                    cleanNodesInList(node.getElementsByTagName("*"));
+                    // Clone the descendants list in case it changes during iteration
+                    var descendants = [];
+                    ko.utils.arrayPushAll(descendants, node.getElementsByTagName("*"));
+                    cleanNodesInList(descendants);
                 }
             }
             return node;
