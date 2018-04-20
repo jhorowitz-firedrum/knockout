@@ -5,7 +5,3 @@
         document = window['document'],
         navigator = window['navigator'],
         JSON = window["JSON"];
-
-    if (!jQueryInstance && typeof jQuery !== "undefined") {
-        jQueryInstance = jQuery;
-    }

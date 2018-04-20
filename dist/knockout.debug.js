@@ -13,10 +13,6 @@ var DEBUG=true;
         document = window['document'],
         navigator = window['navigator'],
         JSON = window["JSON"];
-
-    if (!jQueryInstance && typeof jQuery !== "undefined") {
-        jQueryInstance = jQuery;
-    }
 (function(factory) {
     // Support three module loading scenarios
     if (typeof define === 'function' && define['amd']) {
